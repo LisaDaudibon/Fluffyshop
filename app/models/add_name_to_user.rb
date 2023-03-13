@@ -1,0 +1,2 @@
+class AddNameToUser < ApplicationRecord
+end
