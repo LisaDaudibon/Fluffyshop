@@ -21,7 +21,6 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find(params[:id])
-    @this_user = User.where(first_name: @user.first_name, last_name: @user.last_name)
   end
 
   def edit
