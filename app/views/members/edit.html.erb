@@ -1,6 +1,6 @@
-<h2>Sign up</h2>
+<h2>Edit User</h2>
 
-<%= form_with model:@user, url: members_path do |f| %>
+<%= form_with model:@user, url: member_path(@user), method: :patch do |f| %>
 
   <div class="field">
     <%= f.label :first_name %><br />
@@ -18,7 +18,7 @@
   </div>
 
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
     <%= f.password_field :password, autocomplete: "new-password" %>
   </div>
 
@@ -27,7 +27,14 @@
     <%= f.password_field :password_confirmation, autocomplete: "new-password" %>
   </div>
 
+  <div class="field">
+    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+    <%= f.password_field :current_password, autocomplete: "current-password" %>
+  </div>
+
   <div class="actions">
-    <%= f.submit "Sign up" %>
+    <%= f.submit "Update" %>
   </div>
 <% end %>
+
+<%= link_to "Back", :back %>
