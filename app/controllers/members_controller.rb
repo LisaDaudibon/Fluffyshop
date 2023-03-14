@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+class MembersController < ApplicationController
   def index
     @users = User.all
   end
@@ -11,8 +11,9 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
 
     if @user.save
+      NewCart.new(@user).perform
       flash[:success] = "Your account was created"
-      redirect_to @user
+      redirect_to root_path
     else
       puts @user.errors.full_messages
       render :new
