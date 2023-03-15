@@ -1,0 +1,15 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-md-12 pt-5">
+    <div class="alert alert-success" role="alert">
+  
+      <h1 class="text-center">L'Item a bien été ajouté à votre Panier !</h1>
+      <div class="d-flex justify-content-center pt-5">
+    <%= link_to  "Continuer le Shopping", root_path, class: "btn btn-secondary btn-lg me-5"%>
+    <%= link_to  "Voir mon Panier", cart_path(current_user.id), class: "btn btn-dark btn-lg"%>
+</div>
+    </div>
+  </div>
+
+</div>
