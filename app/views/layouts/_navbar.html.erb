@@ -17,16 +17,16 @@
             <a class="nav-link" href="#">Produits</a>
           </li>
         </ul>
-        <form class="d-flex">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Panier</button>
+        <div class="d-flex">
+          <button class="btn btn-secondary my-2 my-sm-0" >Panier</button>
           <% if current_user %>
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Mon compte</button>
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Se déconnecter</button>            
+            <button class="btn btn-secondary my-2 my-sm-0" >Mon compte</button>
+            <button class="btn btn-secondary my-2 my-sm-0" >Se déconnecter</button>            
           <% else %>
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Se connecter</button>
-            <button class="btn btn-secondary my-2 my-sm-0" type="submit">S'inscrire</button>
+            <button class="btn btn-secondary my-2 my-sm-0" href='/users/sign_in'> Se connecter</button>
+            <button class="btn btn-secondary my-2 my-sm-0" href='/users/sign_up'> S'inscrire</button>
           <% end%>
-        </form>
+        </div>
       </div>
     </div>
   </nav>
