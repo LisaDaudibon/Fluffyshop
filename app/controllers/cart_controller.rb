@@ -1,10 +1,15 @@
 class CartController < ApplicationController
+	def index 
+	
+	end
+
 	def show 
-		#@item = Item.find(params[:id]) 
+		@cart = current_user.cart
+		@cart = Cart.find_by(user: current_user)
+		@total = @cart.total_price
 	end 
 
 	def create 
-		@cart = Cart.create(cart_params)
 	end 
 
 	def update
