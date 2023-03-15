@@ -5,4 +5,7 @@ Rails.application.routes.draw do
   get "home/index"
 
   resources :cart
+  resources :items
+
+
 end
