@@ -1,12 +1,12 @@
 <div id="<%= dom_id item %>" >
   <h5 class="card-title"><strong><%= item.name.capitalize %></strong></h5>
-  <%= image_tag item.image_url, height: 300, class:"card-img-top" %>
+  <%= image_tag item.image_url, class:"card-img-top" %>
   <p class="card-text">
     <strong>Description:</strong>
     <%= item.description %>
     <br>
     <strong>Price:</strong>
-    <%= item.price %> €
+    <%= ('%.02f' % item.price) %> €
   </p>
   <div class="container-row">
     <%= link_to "Show this item", item, class:"btn btn-primary" %>

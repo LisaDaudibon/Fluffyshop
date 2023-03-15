@@ -26,39 +26,39 @@ description_picture = [
 	"La photo de chat montre un chaton adorable avec de grands yeux ronds et des oreilles pointues, qui semble prêt à conquérir le monde."]
 
 url_picture = [
-	'https://images.unsplash.com/photo-1574144611937-0df059b5ef3e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=464&q=80',
+	'https://images.unsplash.com/photo-1583524505974-6facd53f4597?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1169&q=80',
 	'https://images.unsplash.com/photo-1600489601447-81ce0b723d44?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 	'https://images.unsplash.com/photo-1587996833651-06a23343b15d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80',
 	'https://images.unsplash.com/photo-1558674378-e4334d4fecc2?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
 	'https://images.unsplash.com/photo-1599625374666-c1b9db78295f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80',
-	'https://images.unsplash.com/photo-1621016726453-9577d93b4508?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80']
+	'https://images.unsplash.com/photo-1494256997604-768d1f608cac?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1229&q=80']
 
 6.times do |i|
 	Item.create(
-		name: picture_item.sample,
-		description: description_picture.sample,
-		price: Faker::Number.between(from: 1.00, to: 30.00).round(2),
-		image_url: url_picture.sample
+		name: picture_item[i],
+		description: description_picture[i],
+		price: rand(1..5)*5,
+		image_url: url_picture[i]
 		)
 end
 
 Item.create(
-	name: 'mug',
-	description: "l'objet parfait à customiser",
-	price: Faker::Number.between(from: 1.00, to: 30.00).round(2),
+	name: 'Mug chat',
+	description: "Pourquoi avoir un mug ennuyeux quand on peut avoir un mug avec un chat trop mignon?",
+	price: rand(1..5)*5,
 	image_url: "https://www.lapetiteboutiqueaclic.com/wp-content/uploads/2018/06/mug-chat-01-recto.png",
 	)
 
 Item.create(
-	name: 'sticker',
-	description: "l'objet parfait à customiser",
-	price: Faker::Number.between(from: 1.00, to: 30.00).round(2),
+	name: 'Stickers chats',
+	description: "Il n'y a jamais assez de chats, mieux vaut en coller de partout.",
+	price: rand(1..5)*5,
 	image_url: "https://m.media-amazon.com/images/I/61FFpPQgVeL._SR600%2c315_PIWhiteStrip%2cBottomLeft%2c0%2c35_PIStarRatingFOURANDHALF%2cBottomLeft%2c360%2c-6_SR600%2c315_ZA347%2c445%2c290%2c400%2c400%2cAmazonEmberBold%2c12%2c4%2c0%2c0%2c5_SCLZZZZZZZ_FMpng_BG255%2c255%2c255.jpg",
 	)
 
 Item.create(
-	name: 'magnet',
-	description: "l'objet parfait à customiser",
-	price: Faker::Number.between(from: 1.00, to: 30.00).round(2),
+	name: 'Magnet chat',
+	description: "Ce magnifique magnet embellira votre frigo et vous donnera le sourire.",
+	price: rand(1..5)*5,
 	image_url: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/812WZ6nMR+L._AC_UL320_.jpg",
 	)
