@@ -2,13 +2,15 @@
 
 <h1>Items</h1>
 
-<div id="items">
+<div class="row">
   <% @items.each do |item| %>
-    <%= render item %>
-    <p>
-      <%= link_to "Show this item", item %>
-    </p>
+    <div class="col-sm-6 mb-3 mb-sm-0" id="items">
+      <div class="card">
+        <div class="card-body">
+          <%= render item %>
+        </div>
+      </div>
+    </div>
   <% end %>
 </div>
 
-<%= link_to "New item", new_item_path %>

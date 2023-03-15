@@ -1,22 +1,15 @@
-<div id="<%= dom_id item %>">
-  <p>
-    <strong>Name:</strong>
-    <%= item.name %>
-  </p>
-
-  <p>
+<div id="<%= dom_id item %>" >
+  <h5 class="card-title"><strong><%= item.name.capitalize %></strong></h5>
+  <%= image_tag item.image_url, class:"card-img-top" %>
+  <p class="card-text">
     <strong>Description:</strong>
     <%= item.description %>
-  </p>
-
-  <p>
+    <br>
     <strong>Price:</strong>
-    <%= item.price %>
+    <%= ('%.02f' % item.price) %> €
   </p>
-
-  <p>
-    <strong>Image url:</strong>
-    <%= item.image_url %>
-  </p>
-
+  <div class="container-row">
+    <%= link_to "Show this item", item, class:"btn btn-primary" %>
+    <%= button_to "Add to cart", item, class:"btn btn-primary", method: :patch %>
+  </div>
 </div>
