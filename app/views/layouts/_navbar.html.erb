@@ -18,8 +18,14 @@
           </li>
         </ul>
         <form class="d-flex">
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Se connecter</button>
-          <button class="btn btn-secondary my-2 my-sm-0" type="submit">S'inscrire</button>
+          <button class="btn btn-secondary my-2 my-sm-0" type="submit">Panier</button>
+          <% if current_user %>
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Mon compte</button>
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Se déconnecter</button>            
+          <% else %>
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">Se connecter</button>
+            <button class="btn btn-secondary my-2 my-sm-0" type="submit">S'inscrire</button>
+          <% end%>
         </form>
       </div>
     </div>
