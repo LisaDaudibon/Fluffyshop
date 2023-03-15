@@ -1,28 +1,37 @@
-<h4> Votre panier </h4>
+<div class="container pt-5">
+  <div class="row">
+	  <div class="col-md-12">
+       <h1>Cart (<%= current_user.cart.items.length %>)</h1>
+	         <% if @current_user.cart.items.length < 1 %>
+		      <p>Your cart is empty.</p>
+	   <% else %>
 
-  <div id = 'cart list'>
-    <table>
-      <thead>
-        <tr>
-          <th>Produit</th>
-          <th>Prix</th>
-          <th>Total</th>
-        </tr>
-      </thead>
+      <table class="table table-striped">
+		  <thead>
+		  	<tr>
+			     <th>Product</th>
+			    <th>Price</th>
+		  	  <th></th>
+			  </tr>
+		  </thead>
+
       <tbody>
-        <tr>
-          <td></td>
-          <td></td>
-          <td>€</td>
-        </tr>
-      </tbody>
-      <tfoot>
-        <tr>
-          <td>Total:</td>
-          <td><%= %> €</td>
-        </tr>
-      </tfoot>
-    </table>
-  </div>
+          <% current_user.cart_items.each do |cart_item| %>
+              <tr>
+                <td><%= cart_item.item.name %></td>
+                <td><%= cart_item.item.price %>0€ </td>
+                <td>
+            <%= button_to "Remove", cart_item_path(cart_item), method: :delete, class: "btn btn-outline-danger" %>
 
-  <div> #bouton pour commander </div>
+                  </td>
+              </tr>
+            <% end %>
+		  </tbody>
+      </table>
+    </div>
+        <p>
+          <strong>Total: <%= @total %>€</strong>
+        </p>
+  </div>
+</div>
+  <%end%>
