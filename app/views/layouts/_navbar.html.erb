@@ -18,13 +18,13 @@
           </li>
         </ul>
         <div class="d-flex">
-          <button class="btn btn-secondary my-2 my-sm-0" >Panier</button>
+          <a class="btn btn-secondary my-2 my-sm-0" href="#">Panier</a>
           <% if current_user %>
-            <button class="btn btn-secondary my-2 my-sm-0" >Mon compte</button>
-            <button class="btn btn-secondary my-2 my-sm-0" >Se déconnecter</button>            
+            <a class="btn btn-secondary my-2 my-sm-0" href='/users/edit'>Mon compte</a>
+            <a class="btn btn-secondary my-2 my-sm-0" href='/users/sign_out'>Se déconnecter</a>            
           <% else %>
-            <button class="btn btn-secondary my-2 my-sm-0" href='/users/sign_in'> Se connecter</button>
-            <button class="btn btn-secondary my-2 my-sm-0" href='/users/sign_up'> S'inscrire</button>
+            <a class="btn btn-secondary my-2 my-sm-0" href='/users/sign_in'>Se connecter</a>
+            <a class="btn btn-secondary my-2 my-sm-0" href='/users/sign_up'>S'inscrire</a>
           <% end%>
         </div>
       </div>
