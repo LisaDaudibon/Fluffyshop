@@ -1,7 +1,6 @@
 class CartController < ApplicationController
-	
 	def show 
-		@item = Item.find(params[:id]) 
+		#@item = Item.find(params[:id]) 
 	end 
 
 	def create 
@@ -23,5 +22,6 @@ class CartController < ApplicationController
   def cart_params
     params.require(:cart).permit(:user_id, :item_id)
   end
+
 
 end
