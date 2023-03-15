@@ -7,10 +7,12 @@
     <%= csp_meta_tag %>
 
     <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= stylesheet_link_tag 'bootstrap', 'https://bootswatch.com/5/minty/bootstrap.css' %>
     <%= javascript_importmap_tags %>
   </head>
 
   <body>
+  <%= render 'layouts/navbar' %>
     <%= yield %>
   </body>
 </html>
