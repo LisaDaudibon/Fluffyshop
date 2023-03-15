@@ -11,6 +11,7 @@ class CartController < ApplicationController
 		@cart = Cart.find(params[:id])
 		if @cart.update(cart_params)
 		else 
+		end
 	end 
 
 	def destroy
@@ -19,9 +20,8 @@ class CartController < ApplicationController
 
 	private
 
-  def cart_params
-    params.require(:cart).permit(:user_id, :item_id)
-  end
-
+	def cart_params
+		params.require(:cart).permit(:user_id, :item_id)
+	end
 
 end
