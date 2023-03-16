@@ -1,6 +1,8 @@
 class CheckoutController < ApplicationController
   def create
-    @total = params[:total].to_d
+    @cart_id = params[:id]
+    @cart = Cart.find_by(user: current_user)
+		@total = params[:total].to_d
     @session = Stripe::Checkout::Session.create(
       payment_method_types: ['card'],
       line_items: [

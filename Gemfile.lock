@@ -225,6 +225,7 @@ GEM
     sqlite3 (1.6.1-x86_64-linux)
     stimulus-rails (1.2.1)
       railties (>= 6.0.0)
+    stripe (5.55.0)
     table_print (1.5.7)
     thor (1.2.1)
     tilt (2.1.0)
@@ -277,6 +278,7 @@ DEPENDENCIES
   sprockets-rails
   sqlite3
   stimulus-rails
+  stripe (~> 5.53)
   table_print
   turbo-rails
   tzinfo-data
