@@ -5,17 +5,6 @@ ActiveRecord::Base.connection.reset_pk_sequence!('users')
 Item.delete_all
 ActiveRecord::Base.connection.reset_pk_sequence!('items')
 
-# Create 10 users 
-10.times do |i|
-	User.create(
-		first_name: Faker::Name.first_name,
-		last_name: Faker::Name.last_name,
-		email: Faker::Internet.email(domain: 'yopmail.com'),
-		password: 'azerty',
-		is_admin: 'false'
-		)
-end
-
 my_user = User.create(
 	first_name: 'Lisa',
 	last_name: 'Chaton',
@@ -24,7 +13,7 @@ my_user = User.create(
 	is_admin: 'true'
 	)
 
-picture_item = ['photo chat mignon', 'photo chat noir','photo chat blanc', 'photo chat gouttière','photo chat roux','photo chat tigré']
+picture_item = ['Photo chat mignon', 'Photo chat noir','Photo chat blanc', 'Photo chat gouttière','Photo chat roux','Photo chat tigré']
 
 description_picture = [
 	"La photo de chat montre un félin à la fourrure épaisse et soyeuse, avec des rayures distinctives qui lui donnent un air sauvage.",
@@ -55,19 +44,26 @@ Item.create(
 	name: 'Mug chat',
 	description: "Pourquoi avoir un mug ennuyeux quand on peut avoir un mug avec un chat trop mignon?",
 	price: rand(1..5)*5,
-	image_url: "https://www.lapetiteboutiqueaclic.com/wp-content/uploads/2018/06/mug-chat-01-recto.png",
+	image_url: "https://i.etsystatic.com/25157788/r/il/0fb2da/3202762068/il_1588xN.3202762068_lsd0.jpg",
 	)
 
 Item.create(
 	name: 'Stickers chats',
 	description: "Il n'y a jamais assez de chats, mieux vaut en coller de partout.",
 	price: rand(1..5)*5,
-	image_url: "https://m.media-amazon.com/images/I/61FFpPQgVeL._SR600%2c315_PIWhiteStrip%2cBottomLeft%2c0%2c35_PIStarRatingFOURANDHALF%2cBottomLeft%2c360%2c-6_SR600%2c315_ZA347%2c445%2c290%2c400%2c400%2cAmazonEmberBold%2c12%2c4%2c0%2c0%2c5_SCLZZZZZZZ_FMpng_BG255%2c255%2c255.jpg",
+	image_url: "https://i.etsystatic.com/21998926/r/il/0e48bf/2504898018/il_1588xN.2504898018_72vu.jpg",
 	)
 
 Item.create(
 	name: 'Magnet chat',
 	description: "Ce magnifique magnet embellira votre frigo et vous donnera le sourire.",
 	price: rand(1..5)*5,
-	image_url: "https://m.media-amazon.com/images/W/IMAGERENDERING_521856-T1/images/I/812WZ6nMR+L._AC_UL320_.jpg",
+	image_url: "https://i.etsystatic.com/15960486/r/il/981936/3544045515/il_1588xN.3544045515_vf5f.jpg",
 	)
+
+Item.create(
+  name: 'Carte postale chat',
+  description: "Envoyer une belle carte postale chat à l'être aimé.",
+  price: rand(1..5)*5,
+  image_url: "https://i.etsystatic.com/15960486/r/il/edffc0/3736516717/il_1588xN.3736516717_skjq.jpg",
+  )
