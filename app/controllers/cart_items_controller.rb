@@ -12,15 +12,13 @@ class CartItemsController < ApplicationController
   end
 
   def update
-
   end
 
 
   def destroy
-	
-    item = CartItem.find(params[:id])
-    item.destroy
+    cart = current_user.cart
+    cartitem = CartItem.find(params[:id])
+    NewCartUpdate.new(cart, cartitem).perform
 		redirect_to cart_path(current_user.cart)
-    
   end 
 end
