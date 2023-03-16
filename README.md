@@ -1,4 +1,4 @@
-<img src=/app/assets/images/fluffy_shop.png align="right" />
+<img src=/app/assets/images/fluffy_shop.ico align="right" />
 
 # Fluffy Shop 
 Ce projet de site web e-commerce dans le style "Shopify" est une platforme qui permet d'acheter des photos de chatons mignons via Stripe et de les recevoir par mail.
