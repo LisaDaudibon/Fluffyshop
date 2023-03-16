@@ -25,9 +25,10 @@
                 <% end %>
               </tbody>
             </table>
-          <p>
-            <strong>Total: <%= @total %>€</strong>
-          </p>
+            <p>
+              <strong>Total: <%= @total %>€</strong>
+              <%= render 'checkout' %>
+            </p>
         <% end %>
       </div>
   </div>
