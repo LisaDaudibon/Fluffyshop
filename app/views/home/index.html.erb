@@ -1,32 +1,21 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
-<ul>
+<div class="jumbotron">
+  <div class="container">
+    <br><br><br>
+    <h3 class="display-4"><strong>Bienvenue !</strong></h3>
+    <br><br><br><br><br><br>
+    <br><br><br><br><br><br>
+    <a class="btn btn-primary btn-outline-light btn-lg" href="/items" role="button">Trouve une photo</a>
+    <% if user_signed_in? %>
+      <a class="btn btn-info btn-outline-light btn-lg" href="/users/edit" role="button">Mon compte</a>
+    <% else %>
+      <a class="btn btn-info btn-outline-light btn-lg" href="/users/sign_in" role="button">Se connecter</a>
+    <% end %>
+    <br><br><br><br><br>
+  </div>
+</div>
+<div class="content">
+  <br>
   <% if user_signed_in? %>
-    <li>
-      <%= link_to "Sign out", destroy_user_session_path, method: :delete %>
-    </li>
-
-    <li>
-      Voici ton email : <%= current_user.email %>
-    </li>
-
-    <li>
-      <%= link_to "Edit user", edit_user_registration_path %>
-    </li>
-     <li>
-      <%= link_to "panier", cart_path(:id), class:"btn btn-primary my-2 my-sm-0"  %>
-    </li>
-
-  <% else %>
-    <li>    
-      <%= link_to "Sign in", new_user_session_path %>
-    </li>
-
-    <li>
-      <%= link_to "Sign up", new_user_registration_path %>
-    </li>
-
-    
-
+    Connecté en tant que : <%= current_user.email %>
   <% end %>
-</ul>
+</div>
