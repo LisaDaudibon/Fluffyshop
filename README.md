@@ -2,9 +2,8 @@
 
 # Fluffy Shop 
 Ce projet de site web e-commerce dans le style "Shopify" est une platforme qui permet d'acheter des photos de chatons mignons via Stripe et de les recevoir par mail.
-https://fluffyshop.herokuapp.com
 Il s'agit du projet pré-final pour la formation THP Fullstack du groupe Cozy & Fluffy.
-
+https://fluffyshop.herokuapp.com
 ## Membres du groupe
 - Lisa Daudibon (@LisaDaudibon)
 - Karine Da Silva (@KarineDHoshi)
