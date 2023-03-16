@@ -11,9 +11,18 @@ ActiveRecord::Base.connection.reset_pk_sequence!('items')
 		first_name: Faker::Name.first_name,
 		last_name: Faker::Name.last_name,
 		email: Faker::Internet.email(domain: 'yopmail.com'),
-		password: 'azerty'
+		password: 'azerty',
+		is_admin: 'false'
 		)
-end 
+end
+
+my_user = User.create(
+	first_name: 'Lisa',
+	last_name: 'Chaton',
+	email: 'chaton@yopmail.com',
+	password: 'azerty',
+	is_admin: 'true'
+	)
 
 picture_item = ['photo chat mignon', 'photo chat noir','photo chat blanc', 'photo chat gouttière','photo chat roux','photo chat tigré']
 
