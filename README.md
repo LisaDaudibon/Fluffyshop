@@ -1,4 +1,4 @@
-<img src=/app/assets/images/fluffy_shop.ico align="right" />
+<img src=/app/assets/images/fluffy_shop.ico width="100" align="right" />
 
 # Fluffy Shop 
 Ce projet de site web e-commerce dans le style "Shopify" est une platforme qui permet d'acheter des photos de chatons mignons via Stripe et de les recevoir par mail.
@@ -24,4 +24,4 @@ Faire un `rails db:seed` pour créer la base de données.
 
 ## Diagramme ER base de données
 Ci-dessous un diagramme entité-relation de la base de données utilisée :  
-<img src=/app/assets/images/database_fluffyshop.png width="700">
+<img src=/app/assets/images/database_fluffyshop.png width="800">
