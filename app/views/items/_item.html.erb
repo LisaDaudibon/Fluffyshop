@@ -10,6 +10,10 @@
   </p>
   <div class="container-row">
     <%= link_to "Show this item", item, class:"btn btn-primary" %>
-    <%= button_to "Add to cart", item, class:"btn btn-primary", method: :patch %>
+     <% if current_user %>
+      <%= button_to  "Add to cart", cart_items_path(item:@item),class:"btn btn-secondary my-2 my-sm-0"%>
+      <%else%>
+      <a class="btn btn-secondary my-2 my-sm-0" href='/users/sign_up'> add to cart</a>
+    <%end%>
   </div>
 </div>
