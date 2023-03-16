@@ -1,24 +1,27 @@
-# README
+<img src=/app/assets/images/fluffy_shop.ico width="100" align="right" />
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Fluffy Shop 
+Ce projet de site web e-commerce dans le style "Shopify" est une platforme qui permet d'acheter des photos de chatons mignons via Stripe et de les recevoir par mail.
 
-Things you may want to cover:
+Il s'agit du projet pré-final pour la formation THP Fullstack du groupe Cozy & Fluffy.
 
-* Ruby version
+## Membres du groupe
+- Lisa Daudibon (@LisaDaudibon)
+- Karine Da Silva (@KarineDHoshi)
+- Chandara Loek (@Daralafada)
+- Suzanne Christé (@Suziwan)
 
-* System dependencies
+## Versions utilisées
+Ruby 3.0.0, Rails 7.0.4.2, PostgreSQL 1.1.  
+Gems importantes : Stripe 5.53, Faker, Dotenv, Devise.  
+Hébergement : Heroku.
 
-* Configuration
+## Lancement du programme
+Lancer un `bundle install` pour installer les gems mentionnées.
 
-* Database creation
+## Création base de données
+Faire un `rails db:seed` pour créer la base de données.
 
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+## Diagramme ER base de données
+Ci-dessous un diagramme entité-relation de la base de données utilisée :  
+<img src=/app/assets/images/database_fluffyshop.png width="800">
