@@ -9,7 +9,6 @@
     <%= ('%.02f' % item.price) %> €
   </p>
   <div class="container-row">
-    <%= link_to "Show this item", item, class:"btn btn-primary" %>
      <% if current_user %>
       <%= button_to  "Add to cart", cart_items_path(item:@item),class:"btn btn-secondary my-2 my-sm-0"%>
       <%else%>

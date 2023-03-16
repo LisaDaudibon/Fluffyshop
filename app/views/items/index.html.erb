@@ -7,7 +7,18 @@
     <div class="col-sm-6 mb-3 mb-sm-0" id="items">
       <div class="card">
         <div class="card-body">
-          <%= render item %>
+            <h5 class="card-title"><strong><%= item.name.capitalize %></strong></h5>
+  <%= image_tag item.image_url, class:"card-img-top" %>
+  <p class="card-text">
+    <strong>Description:</strong>
+    <%= item.description %>
+    <br>
+    <strong>Price:</strong>
+    <%= ('%.02f' % item.price) %> €
+  </p>
+  <div class="container-row">
+    <%= link_to "Show this item", item, class:"btn btn-primary" %>
+  </div>
         </div>
       </div>
     </div>
