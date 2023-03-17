@@ -1,8 +1,8 @@
 require 'faker'
 
-User.delete_all
+User.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('users')
-Item.delete_all
+Item.destroy_all
 ActiveRecord::Base.connection.reset_pk_sequence!('items')
 
 my_user = User.create(
