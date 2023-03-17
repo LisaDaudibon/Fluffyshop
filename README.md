@@ -2,8 +2,9 @@
 
 # Fluffy Shop 
 Ce projet de site web e-commerce dans le style "Shopify" est une platforme qui permet d'acheter des photos de chatons mignons via Stripe et de les recevoir par mail.
-Il s'agit du projet pré-final pour la formation THP Fullstack du groupe Cozy & Fluffy.
-https://fluffyshop.herokuapp.com
+Il s'agit du projet pré-final pour la formation THP Fullstack du groupe Cozy & Fluffy.  
+Lien du site en production : https://fluffyshop.herokuapp.com
+
 ## Membres du groupe
 - Lisa Daudibon (@LisaDaudibon)
 - Karine Da Silva (@KarineDHoshi)
@@ -19,7 +20,7 @@ Hébergement : Heroku.
 Lancer un `bundle install` pour installer les gems mentionnées.
 
 ## Création base de données
-Faire un `rails db:seed` pour créer la base de données.
+Faire un `rails db:create db:migrate db:seed` pour créer et remplir la base de données.
 
 ## Diagramme ER base de données
 Ci-dessous un diagramme entité-relation de la base de données utilisée :  
