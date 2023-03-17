@@ -1,7 +1,5 @@
 <p style="color: green"><%= notice %></p>
 
-<h1>Items</h1>
-
 <div class="row">
   <% @items.each do |item| %>
     <div class="col-sm-6 mb-3 mb-sm-0" id="items">
@@ -10,14 +8,15 @@
             <h5 class="card-title"><strong><%= item.name.capitalize %></strong></h5>
   <%= image_tag item.image_url, class:"card-img-top" %>
   <p class="card-text">
-    <strong>Description:</strong>
+  <br>
+    <strong>Description :</strong>
     <%= item.description %>
     <br>
-    <strong>Price:</strong>
+    <strong>Prix :</strong>
     <%= ('%.02f' % item.price) %> €
   </p>
   <div class="container-row">
-    <%= link_to "Show this item", item, class:"btn btn-primary" %>
+    <%= link_to "Voir le produit", item, class:"btn btn-primary" %>
   </div>
         </div>
       </div>

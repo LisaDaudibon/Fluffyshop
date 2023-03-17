@@ -2,17 +2,18 @@
   <h5 class="card-title"><strong><%= item.name.capitalize %></strong></h5>
   <%= image_tag item.image_url, class:"card-img-top" %>
   <p class="card-text">
-    <strong>Description:</strong>
+    <br>
+    <strong>Description :</strong>
     <%= item.description %>
     <br>
-    <strong>Price:</strong>
+    <strong>Prix :</strong>
     <%= ('%.02f' % item.price) %> €
   </p>
   <div class="container-row">
      <% if current_user %>
-      <%= button_to  "Add to cart", cart_items_path(item:@item),class:"btn btn-secondary my-2 my-sm-0"%>
+      <%= button_to  "Ajouter au panier", cart_items_path(item:@item),class:"btn btn-secondary my-2 my-sm-0"%>
       <%else%>
-      <a class="btn btn-secondary my-2 my-sm-0" href='/users/sign_in'> add to cart</a>
+      <a class="btn btn-secondary my-2 my-sm-0" href='/users/sign_in'>Ajouter au panier</a>
       <%end%>
   </div>
 </div>

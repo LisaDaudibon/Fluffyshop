@@ -1,16 +1,16 @@
 <div class="container pt-5">
   <div class="row">
 	  <div class="col-md-12">
-       <h1>Cart (<%= current_user.cart.items.length %>)</h1>
+       <h1>Panier (<%= current_user.cart.items.length %>)</h1>
 	        <% if @current_user.cart.items.length < 1 %>
-		      <p>Your cart is empty.</p>
+		      <p>Ton panier est vide.</p>
 	        
           <% else %>
             <table class="table table-striped">
               <thead>
                 <tr>
-                  <th>Product</th>
-                  <th>Price</th>
+                  <th>Produit</th>
+                  <th>Prix</th>
                   <th></th>
                 </tr>
               </thead>
@@ -20,7 +20,7 @@
                   <tr>
                     <td><%= cart_item.item.name %></td>
                     <td><%= cart_item.item.price %>0€ </td>
-                    <td><%= button_to "Remove", cart_item_path(cart_item), method: :delete, class: "btn btn-outline-danger" %></td>
+                    <td><%= button_to "Supprimer", cart_item_path(cart_item), method: :delete, class: "btn btn-outline-danger" %></td>
                   </tr>
                 <% end %>
               </tbody>
