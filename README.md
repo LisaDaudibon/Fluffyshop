@@ -25,3 +25,14 @@ Faire un `rails db:create db:migrate db:seed` pour créer et remplir la base de 
 ## Diagramme ER base de données
 Ci-dessous un diagramme entité-relation de la base de données utilisée :  
 <img src=/app/assets/images/database_fluffyshop.png width="800">
+
+## Website Overview
+<kbd>
+  <img src=/app/assets/images/fluffyshop_home.png width="100%">
+</kbd>
+&nbsp
+
+<kbd>
+  <img src=/app/assets/images/fluffyshop_products1.png width="100%">
+</kbd>
+&nbsp
