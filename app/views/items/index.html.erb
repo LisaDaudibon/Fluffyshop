@@ -1,26 +1,27 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="row">
-  <% @items.each do |item| %>
-    <div class="col-sm-6 mb-3 mb-sm-0" id="items">
-      <div class="card">
-        <div class="card-body">
-            <h5 class="card-title"><strong><%= item.name.capitalize %></strong></h5>
-  <%= image_tag item.image_url, class:"card-img-top" %>
-  <p class="card-text">
-  <br>
-    <strong>Description :</strong>
-    <%= item.description %>
+<div class="container">
+  <div class="row">
+    <% @items.each do |item| %>
+      <div class="col-sm-6 mb-3 mb-sm-0" id="items">
+        <div class="card">
+          <div class="card-body">
+              <h5 class="card-title"><strong><%= item.name.capitalize %></strong></h5>
+    <%= image_tag item.image_url, class:"card-img-top" %>
+    <p class="card-text">
     <br>
-    <strong>Prix :</strong>
-    <%= ('%.02f' % item.price) %> €
-  </p>
-  <div class="container-row">
-    <%= link_to "Voir le produit", item, class:"btn btn-primary" %>
-  </div>
+      <strong>Description :</strong>
+      <%= item.description %>
+      <br>
+      <strong>Prix :</strong>
+      <%= ('%.02f' % item.price) %> €
+    </p>
+    <div class="container-row">
+      <%= link_to "Voir le produit", item, class:"btn btn-primary" %>
+    </div>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
+    <% end %>
+  </div>
 </div>
-
