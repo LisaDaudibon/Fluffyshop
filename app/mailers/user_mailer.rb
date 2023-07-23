@@ -15,7 +15,7 @@ class UserMailer < ApplicationMailer
 
     def order_email(order)
       @order = order
-      @user = @order.user      
+      @user = @order.user
       @url  = 'https://fluffyshop.herokuapp.com' 
       mail(to: @order.user.email, subject: 'FluffyShop: Récapitulatif de votre commande') 
     end

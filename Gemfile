@@ -83,3 +83,4 @@ gem 'table_print'
 gem 'devise'
 gem 'rspec'
 gem 'stripe', '~> 5.53'
+gem "dockerfile-rails", ">= 1.5", :group => :development
