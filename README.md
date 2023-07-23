@@ -4,6 +4,7 @@
 Ce projet de site web e-commerce dans le style "Shopify" est une platforme qui permet d'acheter des photos de chatons mignons via Stripe et de les recevoir par mail.  
 Il s'agit du projet pré-final pour la formation THP Fullstack du groupe Cozy & Fluffy.  
 Lien du site en production : https://fluffyshop.herokuapp.com (hors ligne)
+Nouveau lien du site en production : https://fluffyshop.fly.dev/
 
 ## Membres du groupe
 - Lisa Daudibon (@LisaDaudibon)
@@ -17,6 +18,14 @@ Gems importantes : Stripe 5.53, Faker, Dotenv, Devise.
 Hébergement : Heroku.
 
 ## Lancement du programme
+Télécharger le dossier GitHub en local ou le cloner.
+
+Pour pouvoir lancer le seed, il vous faudra créer une clé API Sendgrid et pour avoir en local toutes les fonctionnalités du projet, il faudra aussi créer une clé API Stripe. 
+
+Pour Sendgrid, renommer le fichier .env.local en .env puis remplacer la variable SENDGRID_PWD par votre clé personnelle entre ' '(guillemet simple).
+
+Pour Stripe, il faut remplacer les deux variables PUBLISHABLE_STRIPE_KEY et SECRET_STRIPE_KEY par vos deux clés Stripe entre ' ' (guillemet simple).
+
 Lancer un `bundle install` pour installer les gems mentionnées.
 Faire un `rails db:create db:migrate db:seed` pour créer et remplir la base de données.
 Démarrer le serveur avec `rails s` pour visualiser le site sur localhost:3000.
