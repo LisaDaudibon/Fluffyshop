@@ -4,7 +4,6 @@
 Ce projet de site web e-commerce dans le style "Shopify" est une platforme qui permet d'acheter des photos de chatons mignons via Stripe et de les recevoir par mail.  
 Il s'agit du projet pré-final pour la formation THP Fullstack du groupe Cozy & Fluffy.  
 Lien du site en production : https://fluffyshop.herokuapp.com (hors ligne)
-Nouveau lien du site en production : https://fluffyshop.fly.dev/
 
 ## Membres du groupe
 - Lisa Daudibon (@LisaDaudibon)
