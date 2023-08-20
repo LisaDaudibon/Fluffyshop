@@ -13,8 +13,8 @@ Nouveau lien du site en production : https://fluffyshop.fly.dev/
 - Suzanne Christé (@Suziwan)
 
 ## Versions utilisées
-Ruby 3.0.0, Rails 7.0.4.2, PostgreSQL 1.1.  
-Gems importantes : Stripe 5.53, Faker, Dotenv, Devise.  
+Ruby 3.0.0, Rails 7.0.4.2, PostgreSQL 1.1.
+Gems importantes : Stripe 5.53, Faker, Dotenv, Devise.
 Hébergement : Heroku.
 
 ## Lancement du programme
